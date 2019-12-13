@@ -1,3 +1,4 @@
+require 'pry'
 def select_books_titles_and_years_in_first_series_order_by_year
   "SELECT books.title, books.year
    FROM books
@@ -22,6 +23,7 @@ def select_value_and_count_of_most_prolific_species
 end
 
 def select_name_and_series_subgenres_of_authors
+  binding.pry
   "SELECT authors.name, subgenres.name
    FROM authors
    JOIN series ON authors.id = series.author_id
